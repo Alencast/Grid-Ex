@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackaTruck</title>
+    <style>
+        
+        main{
+            width: 70em;
+            margin: 0 auto;
+            border: 1px solid black;
+            display: grid; /*Deve ser aplicado ao elemento pai */
+            grid-template-columns: 1.5fr 2.5fr 1fr 1.5fr; /*define a largura das colunas, fr = fração */
+            grid-template-rows:  10em 10em 10em;  /*define a altura das linhas */
+            grid-template-areas: 
+            "nav a b c"
+            "nav d d c"
+            "nav e e c";            
+            gap: 1em;
+        }
+
+        div.area-a{grid-area:a;} 
+        div.area-b{grid-area:b;}
+        div.area-c{grid-area:c;}
+        div.area-d{grid-area:d;}
+        div.area-e{grid-area:e;}
+        nav.area-nav{grid-area:nav;}
+
+        main > div{
+            background-color: cornflowerblue;
+            padding: 2em;
+        }
+        main > nav{
+            background-color: cornflowerblue;
+            padding: 2em;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <main>
+        <nav class="area-nav"><p>nav</p></nav>
+        <div class="area-a"><p>a</p></div>
+        <div class="area-b"><p>b</p></div>
+        <div class="area-c"><p>c</p></div>
+        <div class="area-d"><p>d</p></div>
+        <div class="area-e"><p>e</p></div>
+      
+    </main>
+    
+</body>
+</html>
